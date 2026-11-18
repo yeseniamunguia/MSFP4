@@ -463,7 +463,6 @@ La comparación apoya la interpretación del circuito y del controlador, aunque 
 
 También se incluye una captura del osciloscopio, **[Osciloscopio.bmp](Osciloscopio.bmp)**. La imagen muestra varias señales con transitorios de distinta rapidez. No se incluye una identificación inequívoca de todos los canales o sus conexiones; por lo tanto, **no se asignan valores medidos ni se afirma una verificación cuantitativa completa** a partir de esta sola captura.
 
-![Captura del osciloscopio proporcionada como evidencia](Osciloscopío.bpm)
 
 [Volver al contenido](#contenido)
 
@@ -493,7 +492,6 @@ denPID = [1, Nf, 0]
 
 El programa simula de $0$ a $10$ s con $\Delta t=10^{-3}$ s y aplica la entrada $F[t\ge1]=1$. La respuesta del control se utiliza como señal de referencia para la planta del caso con retroalimentación negativa. La gráfica de salida se guarda como `Endocrino_python.pdf` al ejecutar el script; se adjuntó además la figura **[Endocrino_python.pdf](Endocrino_python.pdf)**:
 
-![Comparación de respuestas obtenida con Python](Endocrino_python.pdf)
 
 ### Alcance de la comparación
 
@@ -515,7 +513,8 @@ Por ello, la coincidencia de **Caso CE** y **Caso EID** en la gráfica de Python
 
 La imagen **[BioRender.png](BioRender.png)** ilustra una relación didáctica entre regiones del cuerpo, regulación hormonal y componentes del circuito. Se identifica el **hipotiroidismo** como condición ilustrada, aunque el circuito no es un modelo clínico validado de esa enfermedad.
 
-![Representación biológica del sistema endócrino elaborada en BioRender](BioRender.png)
+<img width="720" height="504" alt="BioRender" src="https://github.com/user-attachments/assets/a2a1f1d9-3de8-4d38-b377-d6b5e78578fc" />
+
 
 | Elemento señalado en la imagen | Correspondencia indicada o sugerida |
 |---|---|
