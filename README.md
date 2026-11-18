@@ -131,7 +131,7 @@ La fuente $V_e(t)$ alimenta la resistencia $R_1$. En el nodo posterior a esa res
                     GND
 ```
 
-El circuito contiene dos elementos independientes de almacenamiento de energía ($C$ y $L$), por lo que su dinámica es de **segundo orden**. El desarrollo manuscrito y el dibujo del circuito se encuentran en [AnalisisMatematico.pdf](AnalisisMatematico.pdf).
+El circuito contiene dos elementos independientes de almacenamiento de energía ($C$ y $L$), por lo que su dinámica es de **segundo orden**. El desarrollo manuscrito y el dibujo del circuito se encuentran en [Análisis Matemático.pdf](Análisis Matemático.pdf).
 
 [Volver al contenido](#contenido)
 
@@ -374,7 +374,7 @@ x = sim(file, parameters);
 plotsignals(x.t, x.F, x.Fsx, x.Fsy, x.PID, x.CE, x.EID)
 ```
 
-La función `plotsignals` genera una gráfica con las seis señales y la exporta en formato vectorial como **[Endocrino_matlab.pdf](Endocrino_matlab.pdf)**. Las variables se grafican respecto al tiempo en segundos y el voltaje de salida en voltios. La elección del solver `ode15s` es apropiada para estudiar un sistema con polos que presentan escalas temporales muy distintas.
+La función `plotsignals` genera una gráfica con las seis señales y la exporta en formato vectorial como **[endocrino_matlab.png](endocrino_matlab.png)**. Las variables se grafican respecto al tiempo en segundos y el voltaje de salida en voltios. La elección del solver `ode15s` es apropiada para estudiar un sistema con polos que presentan escalas temporales muy distintas.
 
 [Volver al contenido](#contenido)
 
@@ -440,7 +440,7 @@ Los indicadores proceden del **Step Plot: Reference tracking** de PID Tuner. No 
 <a id="resultados"></a>
 ## 12. Interpretación de las gráficas de MATLAB
 
-La figura **[endocrino_matlab.pdf](endocrino_matlab.pdf)** presenta la entrada, las salidas de control y caso, el sistema con PID y las implementaciones adicionales del caso.
+La figura **[endocrino_matlab.png](endocrino_matlab.png)** presenta la entrada, las salidas de control y caso, el sistema con PID y las implementaciones adicionales del caso.
 
 | Señal | Significado |
 |---|---|
@@ -461,9 +461,9 @@ La comparación apoya la interpretación del circuito y del controlador, aunque 
 
 ### Evidencia experimental disponible
 
-También se incluye una captura del osciloscopio, **[Osciloscopio.bmp](Osciloscopio.bmp)**, junto con una conversión a PNG para su visualización en GitHub. La imagen muestra varias señales con transitorios de distinta rapidez. No se incluye una identificación inequívoca de todos los canales o sus conexiones; por lo tanto, **no se asignan valores medidos ni se afirma una verificación cuantitativa completa** a partir de esta sola captura.
+También se incluye una captura del osciloscopio, **[Osciloscopio.bmp](Osciloscopio.bmp)**. La imagen muestra varias señales con transitorios de distinta rapidez. No se incluye una identificación inequívoca de todos los canales o sus conexiones; por lo tanto, **no se asignan valores medidos ni se afirma una verificación cuantitativa completa** a partir de esta sola captura.
 
-![Captura del osciloscopio proporcionada como evidencia](Osciloscopío.png)
+![Captura del osciloscopio proporcionada como evidencia](Osciloscopío.bpm)
 
 [Volver al contenido](#contenido)
 
@@ -513,9 +513,9 @@ Por ello, la coincidencia de **Caso CE** y **Caso EID** en la gráfica de Python
 <a id="biorender"></a>
 ## 14. Representación biológica en BioRender
 
-La imagen **[Biorender.png](Biorender.png)** ilustra una relación didáctica entre regiones del cuerpo, regulación hormonal y componentes del circuito. Se identifica el **hipotiroidismo** como condición ilustrada, aunque el circuito no es un modelo clínico validado de esa enfermedad.
+La imagen **[BioRender.png](BioRender.png)** ilustra una relación didáctica entre regiones del cuerpo, regulación hormonal y componentes del circuito. Se identifica el **hipotiroidismo** como condición ilustrada, aunque el circuito no es un modelo clínico validado de esa enfermedad.
 
-![Representación biológica del sistema endócrino elaborada en BioRender](Biorender.png)
+![Representación biológica del sistema endócrino elaborada en BioRender](BioRender.png)
 
 | Elemento señalado en la imagen | Correspondencia indicada o sugerida |
 |---|---|
@@ -597,7 +597,7 @@ Los siguientes enlaces son **rutas relativas**: funcionan en GitHub si estos arc
 | [controlador.png](controlador.png) | Ganancias de PID Tuner y métricas de referencia | Revisada |
 | [Munguia23212217.py](Munguia23212217.py) | Funciones de transferencia, PID y gráfica de Python | Revisado; incluye copias de señales CE/EID |
 | [Endocrino_python.png](Endocrino_python.png) | Resultado gráfico proporcionado de Python | Revisada |
-| [Biorender.png](Biorender.png) | Ilustración de la analogía hormonal y el caso de hipotiroidismo | Revisada |
+| [BioRender.png](BioRender.png) | Ilustración de la analogía hormonal y el caso de hipotiroidismo | Revisada |
 | [Osciloscopio.bmp](Osciloscopio.bmp) | Captura original del osciloscopio | Revisada visualmente |
 | [README.md](README.md) | Descripción, metodología, resultados y reproducción de la práctica | Documento actual |
 
@@ -628,7 +628,7 @@ python -m pip install control numpy matplotlib
 
 1. Descargar los archivos y colocarlos juntos en una misma carpeta, conservando sus nombres.
 2. Abrir [sistema.slx](sistema.slx) y verificar los parámetros de los subsistemas `Control` y `Caso`.
-3. Abrir [Munguia23212217.mlx](CMunguia23212217.mlx). El cuaderno utiliza `file = 'Sistema'`, por lo que el archivo debe llamarse `Sistema.slx`; si se guarda con otro nombre, actualizar esa variable.
+3. Abrir [Munguia23212217.mlx](Munguia23212217.mlx). El cuaderno utiliza `file = 'Sistema'`, por lo que el archivo debe llamarse `Sistema.slx`; si se guarda con otro nombre, actualizar esa variable.
 4. Ejecutar la simulación con `ode15s`, tiempo final de **10 s** y paso máximo de **0.001 s**.
 5. Confirmar que se obtienen las variables `F`, `Fsx`, `Fsy`, `PID`, `CE` y `EID` en el objeto de simulación.
 6. Ejecutar `plotsignals` y comprobar que se genera `Endocrino_matlab.pdf`.
