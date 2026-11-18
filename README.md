@@ -4,9 +4,9 @@ Repositorio académico de la asignatura **Modelado de Sistemas Fisiológicos**, 
 
 En esta práctica se representa un proceso de regulación hormonal mediante un **circuito eléctrico RLC de segundo orden**. Se estudian la **función de transferencia**, el **error en estado estacionario** y los **polos** de dos condiciones: una de referencia (**control**) y una modificada (**caso**). Se implementan el circuito equivalente, las ecuaciones integro-diferenciales y las funciones de transferencia en MATLAB/Simulink y Simscape Electrical. Finalmente, se incorpora un **controlador PID** y se comparan las respuestas con una reproducción en Python.
 
-**Estudiante:** Cid Pacheco Emmanuel  
-**Número de control:** 23212187  
-**Correo institucional:** l23212187@tectijuana.edu.mx  
+**Estudiante:** Munguia Silva Yesenia Isamar 
+**Número de control:** 23212217  
+**Correo institucional:** l23212217@tectijuana.edu.mx  
 **Docente:** Dr. Paul Antonio Valle Trujillo  
 **Correo del docente:** paul.valle@tectijuana.edu.mx  
 **Asignatura:** Modelado de Sistemas Fisiológicos  
@@ -157,7 +157,7 @@ La capacitancia del caso es **1000 veces mayor**, mientras que su resistencia $R
 <a id="matematicas"></a>
 ## 6. Análisis matemático y función de transferencia
 
-El procedimiento completo manuscrito se encuentra en **[AnalisisMatematico.pdf](AnalisisMatematico.pdf)**. A continuación se presenta un resumen de las relaciones fundamentales.
+El procedimiento completo manuscrito se encuentra en **[Análisis Matemático.pdf](Análisis Matemático.pdf)**. A continuación se presenta un resumen de las relaciones fundamentales.
 
 ### Leyes de Kirchhoff
 
@@ -221,7 +221,7 @@ $$
 \boxed{G_{\mathrm{caso}}(s)=\frac{0.1s+1000}{0.1s^2+1000.1s+2000}}.
 $$
 
-Estos mismos coeficientes se utilizan en [Cid23212187.py](Cid23212187.py) y en los bloques `Transfer Fcn` del modelo [Sistema.slx](Sistema.slx).
+Estos mismos coeficientes se utilizan en [Munguia23212217.py](Munguia23212217.py) y en los bloques `Transfer Fcn` del modelo [sistema.slx](sistema.slx).
 
 [Volver al contenido](#contenido)
 
@@ -305,7 +305,7 @@ En ambos escenarios los polos son **reales y negativos**. Por lo tanto, los mode
 <a id="simulink"></a>
 ## 9. Modelo en Simulink y Simscape
 
-El archivo **[Sistema.slx](Sistema.slx)** contiene dos subsistemas principales: `Control` y `Caso`. Al revisar los bloques se identificaron tres representaciones del modelo y un controlador PID asociado con el caso.
+El archivo **[sistema.slx](sistema.slx)** contiene dos subsistemas principales: `Control` y `Caso`. Al revisar los bloques se identificaron tres representaciones del modelo y un controlador PID asociado con el caso.
 
 | Representación | Implementación y propósito |
 |---|---|
@@ -346,7 +346,7 @@ El modelo envía al espacio de trabajo las siguientes señales:
 <a id="matlab"></a>
 ## 10. Ejecución mediante MATLAB
 
-El cuaderno **[Cid23212187.mlx](Cid23212187.mlx)** contiene la ejecución del modelo, el tratamiento de las señales y la exportación de las figuras. Su versión de consulta está en **[Cid23212187.pdf](Cid23212187.pdf)**.
+El cuaderno **[Munguia23212217.mlx](Munguia23212217.mlx)** contiene la ejecución del modelo, el tratamiento de las señales y la exportación de las figuras. Su versión de consulta está en **[Munguia23212217.pdf](Munguia23212217.pdf)**.
 
 La simulación utiliza los siguientes ajustes:
 
@@ -429,9 +429,9 @@ La captura muestra, para la columna *Tuned*:
 | Margen de fase | 90° (aprox. $1.4\times10^3$ rad/s) |
 | Estabilidad de lazo cerrado | Estable |
 
-Los indicadores proceden del **Step Plot: Reference tracking** de PID Tuner. No deben interpretarse como mediciones directas sobre la gráfica de 0–10 s del cuaderno. La evidencia utilizada es **[Controlador PID.png](Controlador%20PID.png)**:
+Los indicadores proceden del **Step Plot: Reference tracking** de PID Tuner. No deben interpretarse como mediciones directas sobre la gráfica de 0–10 s del cuaderno. La evidencia utilizada es **[controlador.png](controlador.png)**:
 
-![Parámetros y métricas del controlador PID](Controlador%20PID.png)
+![Parámetros y métricas del controlador PID](controlador.png)
 
 [Volver al contenido](#contenido)
 
@@ -440,7 +440,7 @@ Los indicadores proceden del **Step Plot: Reference tracking** de PID Tuner. No 
 <a id="resultados"></a>
 ## 12. Interpretación de las gráficas de MATLAB
 
-La figura **[Endocrino_matlab.pdf](Endocrino_matlab.pdf)** presenta la entrada, las salidas de control y caso, el sistema con PID y las implementaciones adicionales del caso.
+La figura **[endocrino_matlab.pdf](endocrino_matlab.pdf)** presenta la entrada, las salidas de control y caso, el sistema con PID y las implementaciones adicionales del caso.
 
 | Señal | Significado |
 |---|---|
@@ -461,9 +461,9 @@ La comparación apoya la interpretación del circuito y del controlador, aunque 
 
 ### Evidencia experimental disponible
 
-También se incluye una captura del osciloscopio, **[senalBien.bmp](senalBien.bmp)**, junto con una conversión a PNG para su visualización en GitHub. La imagen muestra varias señales con transitorios de distinta rapidez. No se incluye una identificación inequívoca de todos los canales o sus conexiones; por lo tanto, **no se asignan valores medidos ni se afirma una verificación cuantitativa completa** a partir de esta sola captura.
+También se incluye una captura del osciloscopio, **[Osciloscopio.bmp](Osciloscopio.bmp)**, junto con una conversión a PNG para su visualización en GitHub. La imagen muestra varias señales con transitorios de distinta rapidez. No se incluye una identificación inequívoca de todos los canales o sus conexiones; por lo tanto, **no se asignan valores medidos ni se afirma una verificación cuantitativa completa** a partir de esta sola captura.
 
-![Captura del osciloscopio proporcionada como evidencia](senalBien.png)
+![Captura del osciloscopio proporcionada como evidencia](Osciloscopío.png)
 
 [Volver al contenido](#contenido)
 
@@ -472,7 +472,7 @@ También se incluye una captura del osciloscopio, **[senalBien.bmp](senalBien.bm
 <a id="python"></a>
 ## 13. Desarrollo complementario en Python
 
-El programa **[Cid23212187.py](Cid23212187.py)** utiliza `control`, `numpy` y `matplotlib` para definir las funciones de transferencia de control y caso, calcular sus polos, simular las respuestas al escalón y construir la planta del caso con un PID de derivada filtrada.
+El programa **[Munguia23212217.py](Munguia23212217.py)** utiliza `control`, `numpy` y `matplotlib` para definir las funciones de transferencia de control y caso, calcular sus polos, simular las respuestas al escalón y construir la planta del caso con un PID de derivada filtrada.
 
 ### Funciones de transferencia
 
@@ -491,9 +491,9 @@ numPID = [kP + kD * Nf, kP * Nf + kI, kI * Nf]
 denPID = [1, Nf, 0]
 ```
 
-El programa simula de $0$ a $10$ s con $\Delta t=10^{-3}$ s y aplica la entrada $F[t\ge1]=1$. La respuesta del control se utiliza como señal de referencia para la planta del caso con retroalimentación negativa. La gráfica de salida se guarda como `Endocrino_python.pdf` al ejecutar el script; se adjuntó además la figura **[Figure_python.png](Figure_python.png)**:
+El programa simula de $0$ a $10$ s con $\Delta t=10^{-3}$ s y aplica la entrada $F[t\ge1]=1$. La respuesta del control se utiliza como señal de referencia para la planta del caso con retroalimentación negativa. La gráfica de salida se guarda como `Endocrino_python.pdf` al ejecutar el script; se adjuntó además la figura **[Endocrino_python.pdf](Endocrino_python.pdf)**:
 
-![Comparación de respuestas obtenida con Python](Figure_python.png)
+![Comparación de respuestas obtenida con Python](Endocrino_python.pdf)
 
 ### Alcance de la comparación
 
@@ -513,9 +513,9 @@ Por ello, la coincidencia de **Caso CE** y **Caso EID** en la gráfica de Python
 <a id="biorender"></a>
 ## 14. Representación biológica en BioRender
 
-La imagen **[Biorender_SistemaEndocrino.jpeg](Biorender_SistemaEndocrino.jpeg)** ilustra una relación didáctica entre regiones del cuerpo, regulación hormonal y componentes del circuito. Se identifica el **hipotiroidismo** como condición ilustrada, aunque el circuito no es un modelo clínico validado de esa enfermedad.
+La imagen **[Biorender.png](Biorender.png)** ilustra una relación didáctica entre regiones del cuerpo, regulación hormonal y componentes del circuito. Se identifica el **hipotiroidismo** como condición ilustrada, aunque el circuito no es un modelo clínico validado de esa enfermedad.
 
-![Representación biológica del sistema endócrino elaborada en BioRender](Biorender_SistemaEndocrino.jpeg)
+![Representación biológica del sistema endócrino elaborada en BioRender](Biorender.png)
 
 | Elemento señalado en la imagen | Correspondencia indicada o sugerida |
 |---|---|
@@ -589,17 +589,16 @@ Los siguientes enlaces son **rutas relativas**: funcionan en GitHub si estos arc
 
 | Archivo o material | Contenido | Estado de revisión |
 |---|---|---|
-| [AnalisisMatematico.pdf](AnalisisMatematico.pdf) | Circuito, función de transferencia, error, estabilidad y modelo integro-diferencial manuscritos | Revisado |
-| [Sistema.slx](Sistema.slx) | Control y caso; FT, EID, CE y bloque PID | Estructura y parámetros inspeccionados; no ejecutado aquí |
-| [Cid23212187.mlx](Cid23212187.mlx) | Cuaderno de MATLAB y función de gráficas | Revisado |
-| [Cid23212187.pdf](Cid23212187.pdf) | Exportación del cuaderno computacional | Revisada |
-| [Endocrino_matlab.pdf](Endocrino_matlab.pdf) | Comparación de entrada, control, caso, PID, CE y EID | Revisada |
-| [Controlador PID.png](Controlador%20PID.png) | Ganancias de PID Tuner y métricas de referencia | Revisada |
-| [Cid23212187.py](Cid23212187.py) | Funciones de transferencia, PID y gráfica de Python | Revisado; incluye copias de señales CE/EID |
-| [Figure_python.png](Figure_python.png) | Resultado gráfico proporcionado de Python | Revisada |
-| [Biorender_SistemaEndocrino.jpeg](Biorender_SistemaEndocrino.jpeg) | Ilustración de la analogía hormonal y el caso de hipotiroidismo | Revisada |
-| [senalBien.bmp](senalBien.bmp) | Captura original del osciloscopio | Revisada visualmente |
-| [senalBien.png](senalBien.png) | Copia de la captura en un formato que GitHub permite previsualizar | Convertida desde BMP |
+| [Análisis Matemático.pdf](Análisis Matemático.pdf) | Circuito, función de transferencia, error, estabilidad y modelo integro-diferencial manuscritos | Revisado |
+| [sistema.slx](sistema.slx) | Control y caso; FT, EID, CE y bloque PID | Estructura y parámetros inspeccionados; no ejecutado aquí |
+| [Munguia23212217.mlx](Munguia23212217.mlx) | Cuaderno de MATLAB y función de gráficas | Revisado |
+| [Munguia23212217.pdf](Munguia23212217.pdf) | Exportación del cuaderno computacional | Revisada |
+| [endocrino_matlab.png](endocrino_matlab.png) | Comparación de entrada, control, caso, PID, CE y EID | Revisada |
+| [controlador.png](controlador.png) | Ganancias de PID Tuner y métricas de referencia | Revisada |
+| [Munguia23212217.py](Munguia23212217.py) | Funciones de transferencia, PID y gráfica de Python | Revisado; incluye copias de señales CE/EID |
+| [Endocrino_python.png](Endocrino_python.png) | Resultado gráfico proporcionado de Python | Revisada |
+| [Biorender.png](Biorender.png) | Ilustración de la analogía hormonal y el caso de hipotiroidismo | Revisada |
+| [Osciloscopio.bmp](Osciloscopio.bmp) | Captura original del osciloscopio | Revisada visualmente |
 | [README.md](README.md) | Descripción, metodología, resultados y reproducción de la práctica | Documento actual |
 
 El archivo `CITATION.cff`, que se solicita como parte de la documentación académica, **no fue proporcionado** en los materiales de esta entrega y deberá añadirse con los datos bibliográficos finales del repositorio.
@@ -628,12 +627,12 @@ python -m pip install control numpy matplotlib
 ### Pasos de ejecución
 
 1. Descargar los archivos y colocarlos juntos en una misma carpeta, conservando sus nombres.
-2. Abrir [Sistema.slx](Sistema.slx) y verificar los parámetros de los subsistemas `Control` y `Caso`.
-3. Abrir [Cid23212187.mlx](Cid23212187.mlx). El cuaderno utiliza `file = 'Sistema'`, por lo que el archivo debe llamarse `Sistema.slx`; si se guarda con otro nombre, actualizar esa variable.
+2. Abrir [sistema.slx](sistema.slx) y verificar los parámetros de los subsistemas `Control` y `Caso`.
+3. Abrir [Munguia23212217.mlx](CMunguia23212217.mlx). El cuaderno utiliza `file = 'Sistema'`, por lo que el archivo debe llamarse `Sistema.slx`; si se guarda con otro nombre, actualizar esa variable.
 4. Ejecutar la simulación con `ode15s`, tiempo final de **10 s** y paso máximo de **0.001 s**.
 5. Confirmar que se obtienen las variables `F`, `Fsx`, `Fsy`, `PID`, `CE` y `EID` en el objeto de simulación.
 6. Ejecutar `plotsignals` y comprobar que se genera `Endocrino_matlab.pdf`.
-7. Ejecutar [Cid23212187.py](Cid23212187.py) para reproducir las curvas a partir de las funciones de transferencia. El programa guarda un PDF con el nombre `Endocrino_python.pdf`.
+7. Ejecutar [Munguia23212217.py](Munguia23212217.py) para reproducir las curvas a partir de las funciones de transferencia. El programa guarda un PDF con el nombre `Endocrino_python.pdf`.
 8. Antes de comparar numéricamente las respuestas controladas, **igualar las ganancias $k_P$, $k_I$, $k_D$ y $N$** del script de Python con las guardadas en el bloque PID de Simulink.
 9. Para una verificación estricta de CE y EID, comparar con las salidas reales de Simscape y de los subsistemas de ecuaciones, no con las copias `CE = Fsy.copy()` y `EID = Fsy.copy()` del script de Python.
 10. Incorporar el análisis matemático, las figuras, la ilustración de BioRender y, si corresponde, las mediciones experimentales documentadas al repositorio de GitHub.
